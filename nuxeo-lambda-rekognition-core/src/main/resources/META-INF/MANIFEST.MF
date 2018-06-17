@@ -1,0 +1,12 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Vendor: org.nuxeo.labs.lambda.rekognition
+Bundle-Version: 1.0.0
+Bundle-Name: nuxeo-lambda-rekognition-core
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: nuxeo-lambda-rekognition-core;singleton=true
+Nuxeo-Component: OSGI-INF/listeners-contrib.xml,
+    OSGI-INF/lambda-config-contrib.xml,
+    OSGI-INF/default-chain-contrib.xml
+

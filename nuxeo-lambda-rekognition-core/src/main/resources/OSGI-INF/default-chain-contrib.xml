@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.lambda.rekognition.chains">
+    <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
+        <scriptedOperation id="javascript.image_rekognition_mapper">
+            <inputType>Document</inputType>
+            <outputType>Document</outputType>
+            <category>javascript</category>
+            <description></description>
+            <script><![CDATA[function run(input, params) {
+              Console.log('Input '+input);
+
+              var rekognition = JSON.parse(ctx.rekognition);
+
+              Console.log('Rekognition Result '+ ctx.rekognition);
+
+              var tags = [];
+
+              rekognition.result.CelebrityFaces.forEach(function(celebrity) {
+                tags.push(celebrity.Name);
+              });
+
+              input = Services.TagDocument(input, {'tags': tags });
+
+              return input;
+        }]]></script>
+        </scriptedOperation>
+    </extension>
+</component>

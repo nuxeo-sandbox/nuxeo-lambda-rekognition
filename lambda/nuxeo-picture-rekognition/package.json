@@ -1,0 +1,15 @@
+{
+  "name": "nuxeo-picture-rekognition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Michael Vachette",
+  "contributors": [
+    "Michael Vachette"
+  ],
+  "license": "GPL",
+  "dependencies": {
+    "aws-sdk": "^2.45.0",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.lambda.rekognition.listeners">
+
+  <require>org.nuxeo.platform.video.core.listeners</require>
+
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+
+    <listener name="RekognitionPictureConversionChangedListener" async="true" postCommit="true"
+              class="org.nuxeo.labs.lambda.rekognition.listeners.PictureConversionChangedListener" priority="20">
+      <event>pictureViewsGenerationDone</event>
+    </listener>
+
+    <listener name="ImageRekognitionSuccessListener"
+              async="false"
+              postCommit="false"
+              class="org.nuxeo.labs.lambda.rekognition.listeners.ImageRekognitionSuccessListener"
+              priority="20">
+      <event>ImageRekognitionSuccess</event>
+    </listener>
+
+    <listener name="ImageRekognitionErrorListener"
+              async="false"
+              postCommit="false"
+              class="org.nuxeo.labs.lambda.rekognition.listeners.ImageRekognitionErrorListener"
+              priority="20">
+      <event>ImageRekognitionError</event>
+    </listener>
+
+  </extension>
+</component>
