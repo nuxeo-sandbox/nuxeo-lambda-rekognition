@@ -65,7 +65,8 @@ public class PictureConversionChangedListener implements PostCommitEventListener
         }
 
         MultiviewPicture mvp = doc.getAdapter(MultiviewPicture.class);
-        Blob blob = mvp.getView("Medium").getBlob();
+        String viewName = Framework.getProperty("aws.lambda.rekognition.picture.view","Medium");
+        Blob blob = mvp.getView(viewName).getBlob();
 
         if (blob == null) {
             return;
