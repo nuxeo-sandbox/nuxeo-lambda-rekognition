@@ -35,7 +35,7 @@ npm install
 ```
 Zip the content of lambda/nuxeo-picture-rekognition
 
-*(Note for Nuxeo Presales: this fucntion is already deployed in us-west and us-east)*
+*(Note for Nuxeo Presales: this function is already deployed in us-west and us-east)*
 
 * Create a lambda function nuxeo-picture-rekognition
   * Upload the function zip file generated in the previous step
